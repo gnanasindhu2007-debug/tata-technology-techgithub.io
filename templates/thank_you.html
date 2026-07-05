@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">Session closed</p>
+    <h1>Thank You</h1>
+    <p>DeepShield AI has safely ended your automotive cybersecurity session.</p>
+    <a class="button" href="{{ url_for('login') }}">Login Again</a>
+  </div>
+</section>
+{% endblock %}

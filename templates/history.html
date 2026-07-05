@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel wide">
+  <h1>Scan History</h1>
+  {% if rows %}
+  <div class="table">
+    {% for row in rows %}
+    <a class="row" href="{{ url_for('result', scan_id=row.id) }}">
+      <span>{{ row.scanned_at }}</span>
+      <span>{{ row.filename }}</span>
+      <span>{{ row.classification }}</span>
+      <span>{{ row.severity }}</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">No scan messages yet.</p>
+  {% endif %}
+  <a class="button" href="{{ url_for('scan') }}">Next: New Scan</a>
+</section>
+{% endblock %}

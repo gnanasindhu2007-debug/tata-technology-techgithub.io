@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="header">
+  <p class="eyebrow">Tata Technologies aligned automotive cybersecurity project</p>
+  <h1>Connected Vehicle Threat Defense</h1>
+  <p>Upload automotive software and firmware files for AI-powered malware classification at the edge.</p>
+  <a class="button" href="{{ url_for('scan') }}">Next: Start Security Scan</a>
+</section>
+<section class="stats">
+  <div><strong>{{ total }}</strong><span>Total scans</span></div>
+  <div><strong>ECU</strong><span>Firmware-ready analysis</span></div>
+  <div><strong>AI</strong><span>Explainable confidence score</span></div>
+</section>
+<section>
+  <h2>Recent Scan Messages</h2>
+  {% if rows %}
+  <div class="table">
+    {% for row in rows %}
+    <a class="row" href="{{ url_for('result', scan_id=row.id) }}">
+      <span>{{ row.filename }}</span>
+      <span>{{ row.classification }}</span>
+      <span>{{ row.confidence }}%</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">No scans yet. Click the scan button to upload a file.</p>
+  {% endif %}
+</section>
+{% endblock %}

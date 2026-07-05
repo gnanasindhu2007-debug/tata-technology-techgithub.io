@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">AI at the Edge Solutions for Automotive</p>
+    <h1>DeepShield AI</h1>
+    <p>Edge-based deep learning malware detection for ECU firmware, diagnostic tools, OTA packages, infotainment files, and automotive applications.</p>
+  </div>
+  <form class="panel" method="post">
+    <h2>Engineer Login</h2>
+    <label>Username</label>
+    <input name="username" value="engineer" required>
+    <label>Password</label>
+    <input name="password" type="password" value="deepshield123" required>
+    <button type="submit">Login and Continue</button>
+  </form>
+</section>
+{% endblock %}

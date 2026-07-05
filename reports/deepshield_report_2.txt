@@ -1,0 +1,19 @@
+DeepShield AI Automotive Cybersecurity Report
+
+Scan ID: 2
+Engineer: engineer
+Filename: sindhu_resumedoc.docx
+SHA-256: c5e42b6690efdcd5f1c92100c903f57d71e5de922bf92490ce6872a5aca926fe
+File Size: 20103 bytes
+Classification: Suspicious
+Confidence: 77.2%
+Threat Severity: Medium
+Scanned At: 2026-07-05 12:00:57
+
+Explainable AI Insights:
+High entropy suggests packing, encryption, or obfuscation. Send to an automotive security engineer for manual validation.
+
+Recommendation:
+Safe files may proceed to standard validation. Suspicious or Malware files
+should be blocked from ECU, infotainment, diagnostic, or OTA deployment until
+security review is completed.

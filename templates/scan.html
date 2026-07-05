@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel wide">
+  <h1>Automotive Malware Scan</h1>
+  <p>Upload ECU firmware, OTA packages, executables, diagnostic logs, or infotainment software. Every click submits to a working backend route and displays the next page.</p>
+  <form method="post" enctype="multipart/form-data" class="upload">
+    <input type="file" name="file" required>
+    <button type="submit">Run DeepShield AI Scan</button>
+  </form>
+  <a class="button secondary" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</section>
+{% endblock %}
